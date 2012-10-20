@@ -45,7 +45,7 @@ body.home{
 }
 
 p {
-	color:#777;
+	color:#333;
 	font-size:1.0625rem; /* 17px */
 	line-height:1.4375rem;
 	margin:0 0 1rem 0;
@@ -609,6 +609,11 @@ p.wp-caption-text {
 		border-bottom:none;
 		color:#ffde00;
 	}
+
+	p {
+		color:#777;
+	}
+	
 	.no-touch h2 a:hover {
 		border-bottom:none;
 		color:#00b1f7;
