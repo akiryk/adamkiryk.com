@@ -1,0 +1,820 @@
+/*
+Theme Name: Artux
+Theme URI: http://example.com/example/
+Description: A search engine optimized website framework for WordPress.
+Author: Adam Kiryk
+Author URI: http://example.com/
+Version: 1.0
+Tags: Comma-separated tags that describe your theme
+.
+Your theme can be your copyrighted work.
+Like WordPress, this work is released under GNU General Public License, version 2 (GPL).
+ 
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ 
+.
+*/
+
+@font-face {
+		font-family: 'Whitney-Book';
+		src: url('fonts/whitney-book.eot');
+		src: url('fonts/whitney-book.eot?#iefix') format('embedded-opentype'),
+				 url('fonts/whitney-book.woff') format('woff'),
+				 url('fonts/whitney-book.ttf') format('truetype'),
+				 url('fonts/whitney-book.svg#whitney-book') format('svg');
+		font-weight: normal;
+		font-style: normal;
+}
+
+/* *********************************************************  */
+/* ***************** LAYOUT STYLES   **********************  */
+/* *********************************************************  */
+
+body {
+	margin:0;
+  	line-height: 1.375em; /* 16x1.375=22px */
+	font-size:100%;
+	font-weight:200;
+	color:#111;
+	background:#fff;
+	font-family: "Whitney-Book", Helvetica, Arial, sans-serif;
+}
+
+body.home{
+	background:#e1e1e1;
+}
+
+p {
+	color:#777;
+	font-size:1.0625rem; /* 17px */
+	line-height:1.4375rem;
+	margin:0 0 1rem 0;
+}
+
+h2, h3 {
+font-family:"museo-slab", Helvetica,sans-serif;
+font-size:2em;
+line-height: 100%;
+margin-top:0;
+margin-bottom:.25em;
+}
+
+h1 {
+	color:#ddd;
+	font-family:"museo-slab", Georgia, serif;
+	font-size:1.125rem;
+	font-weight: 700;
+	margin-top:0;
+	margin-bottom:.25em;
+	text-shadow:-1px 1px 1px rgba(0,0,0,0.6);
+}
+h1 .blog-description {
+	color:#bbb;
+	font-weight:100;
+}
+
+blockquote {
+	margin:0;
+}
+blockquote p {
+	color:#333;
+	font-family: 'museo-slab', Georgia, serif;
+	font-size:1.25rem;
+	font-weight: 400;
+	line-height: 1.8rem;
+}
+
+ul#tags {
+	color:#888;
+	list-style-type:none;
+	padding:0;
+}
+ul#tags li.title {
+	font-weight:100;
+}
+ul#tags li {
+	display:inline-block;
+	font-weight: 700;
+	padding-right:.375rem;
+}
+ul#tags a {
+	color:#888;
+}
+
+#wrapper {
+	margin:0 auto;
+	overflow:hidden;
+	width:100%;
+}
+
+.home #page {
+	width:92%;
+}
+
+#page {
+	margin: 0 auto;
+	width:75%;
+}
+
+.interior #header {
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+	margin-bottom: 1.5rem;
+}
+
+#header {
+	background:#333;
+	margin-bottom:30px;
+}
+
+#branding {
+	margin:0 auto;
+	padding:0.8rem 0;
+	width:92%;
+}
+
+h1#site-name {
+	margin:0 auto;
+}
+
+#main,
+#content-container{
+	clear:both;
+}
+
+#nav-below{
+	clear:both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+h3.posttype{
+	font-size:.825em;
+	text-transform: uppercase;
+	font-family: "museo-sans", Helvetica, sans-serif;
+	font-weight:100;
+	margin-bottom:.5em;
+}
+
+.no-touch a.site-title:hover {
+	text-decoration:none;
+	color:#003b8c;
+}
+
+img {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	height: auto;
+    margin: 0;
+    max-width: 100%;
+    width: auto;
+}
+
+a {
+	text-decoration:none;
+	color:#222;
+}
+
+.no-touch a:hover {
+	color:#003b8c;
+}
+
+a.site-title {
+	color:#ccc;
+}
+
+.no-touch a.site-title:hover {
+	color:#fff;
+}
+li.current_page_item a{
+	color:#777;
+}
+
+
+/* *********************************************************  */
+/* ***************** ARTICLE STYLES   **********************  */
+/* *********************************************************  */
+.article{
+	width:97%; 
+	margin:0 1.5% 30px;
+	float:left;
+	background:white;
+	box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.article-inner{
+	padding:.5rem;
+}
+.entry-utility {
+/*	margin-bottom:1.5em;*/
+	font-size:11px;
+}
+.home-page .entry-meta,
+.home-page .entry-date,
+.home-page .entry-utility {
+	display: none;
+}
+
+.entry-meta{
+	font-size:.875em;
+	color:#aaa;
+}
+.post-meta {
+	color:#999;
+	font-size:13px;
+}
+.primary-image{
+	
+}
+a.image-link{
+	display: block;
+	line-height: 0;
+}
+
+h2{
+	font-size:1.5rem;
+}
+h2 a{
+	border-bottom:1px dotted white;
+	color:#333;
+}
+
+.no-touch h2 a:hover {
+	border-bottom:1px dotted #3968b6;
+	color:#3968b6;
+}
+
+.wp-caption {
+	margin-bottom:40px;
+	width:auto !important;
+}
+
+p.wp-caption-text {
+	font-size: 12px;
+	line-height: 18px;
+	color: #666;
+}
+
+.text-content {
+	padding:.5rem 1rem 1rem;
+}
+
+.text-content p {
+	margin:0 0 .5rem;
+}
+
+.interior img {
+	margin-bottom:20px;
+}
+
+/* *********************************************************  */
+/* ***************** SINGLE PAGES ********************  */
+/* *********************************************************  */
+.single-article{
+	background:white;
+}
+.interior h2{
+	font-size:2rem;
+	font-weight:100;
+}
+[id*="post"] {
+	overflow: visible;
+}
+.alignleft {
+	float:left;
+	margin:5px 4.0650407% 1.25rem 0;
+	width:47.96748% !important; 
+}
+.alignleft.first,
+.alignright.first {
+	clear:both;
+}
+.alignleft.last {
+	margin:0 0 1.25rem 0;
+}
+.alignright {
+	float:right;
+	margin:5px 0 1.25rem 4.0650407%;
+	width:47.96748% !important; 
+}
+.alignright.last {
+	margin:0 0 1.25rem 0;
+}
+
+.wp-caption.alignleft,
+.wp-caption.alignright {
+	margin-bottom:0;
+}
+
+.interior .wp-caption img {
+	margin-bottom:10px;
+}
+
+
+.display-small {
+	/*width:26.01626%;*/
+	width:21.95122% !important;
+}
+.display-small.outset{
+	/*margin-left:-30.081301%;*/
+}
+.interior .post-meta {
+	margin-bottom:.75rem;
+}
+
+.interior .article-inner{
+	padding:0;
+}
+
+.nav-previous a {
+	border-top:1px dotted #999;
+}
+.nav-next a{
+	border-top:1px dotted #999;
+	border-bottom:1px dotted #999;
+}
+.nav-next a,
+.nav-previous a{
+	display: block;
+	font-family:'museo-slab';
+	padding:3%;
+	width:100%;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+.entry-content a {
+	color:#003B8C;
+}
+
+.no-touch .entry-content a:hover{
+	background:yellow;
+}
+
+/*Related Posts*/
+.interior .related-posts h2 {
+	border-bottom:1px solid #ccc;
+	 	font-size:1.375rem;
+	 	padding-bottom:.75rem;
+}
+.related-posts {
+	clear:both;
+	margin-top:40px;
+}
+.related-posts ul{
+	padding:0;
+}
+.related-posts li{
+	float:left;
+	margin:5px 4.0650407% 1.25rem 0;
+	width:21.95122%;
+}
+.related-posts li:nth-child(4n){
+	margin:5px 0 1.25rem 0;
+}
+.related-posts li a {
+	display: block;
+	font-size:14px;
+}
+.related-posts li a:hover,
+.no-touch .related-posts li a:hover {
+	border-bottom:none;
+	color:#222;
+}
+.related-posts li a:hover img,
+.no-touch .related-posts li a:hover img {
+	opacity:0.5;
+}
+.related-posts img {
+	margin-bottom:5px;
+}
+	
+/* *********************************************************  */
+/* ***************** COLORS ********************  */
+/* *********************************************************  */	
+.pale{
+	color:#bbb;
+}
+.rgba .pale{
+	color: rgba(0,0,0,0.3);
+}
+	
+/* *********************************************************  */
+/* ***************** Under 400px ********************  */
+/* *********************************************************  */	
+@media only screen and (max-width:400px) {
+/* Smartphones (portrait) ----------- */
+	.alignright,
+	.alignleft {
+		float:none;
+		margin:0 0 1.25rem 0;
+		width:100% !important; 
+	}
+
+}
+
+/* *********************************************************  */
+/* ***************** Under 800px ********************  */
+/* *********************************************************  */	
+@media screen and (max-width:760px) {
+	body.home {
+		background:white;
+	}
+
+	p {
+		font-size:1.0625rem;
+	}
+
+	#page,
+	.home #page {
+		width:100%;
+	}
+
+	#branding {
+		padding:.7rem 0;
+	}
+	#header {
+		margin-bottom:15px;
+	}
+
+	h1 {
+		font-size:.875rem; /* 14px */
+	}
+
+	h2,
+	.interior h2 {
+		font-size:1.5rem;
+	}
+
+	h2 a {
+		border-bottom:none;
+		text-shadow:-1px 1px 0 #fff;
+	}
+
+	blockquote {
+		margin:0;
+	}
+	blockquote p {
+		font-family: 'museo-sans', Helvetica, arial, sans-serif;
+		font-size:1.0625rem;
+		font-weight: 400;
+		line-height: 1.375rem;
+	}
+	.article{
+		-moz-box-shadow:none;
+		box-shadow:none;
+		margin:0 auto;
+		display: inline-block;
+		width:100%;
+	}
+
+	.article-shadow {
+		background: #fff; /* Old browsers */
+		background: -moz-linear-gradient(top,  #bababa 0%, #ffffff 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d6d6d6), 
+			color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #bababa 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #bababa 0%,#ffffff 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #bababa 0%,#ffffff 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #bababa 0%,#ffffff 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bababa', 
+			endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+		border-top:1px solid #999;
+		height:40px;
+		margin-bottom:10px;
+	}
+
+	.first .article-shadow {
+		background:none;
+		border-top:none;
+		height:0;
+	}
+	
+	.article:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+	}
+
+	.article-inner{
+		margin-top:-30px;
+		padding:0;
+	}
+
+	.first .article-inner {
+		margin-top:0;
+	}
+
+	.interior .article-inner {
+		margin-top:0;
+		padding:0 1.25rem;
+	}
+
+	.home img {
+		border:4px solid #fff;
+		box-shadow:0 0 6px #999;
+	}
+
+	.home a.image-link {
+		text-align: center;
+	}
+
+	.primary-image {
+		width:92%;
+		margin:0 auto 10px;
+	}
+
+	.text-content {
+		margin:0 auto;
+		padding:.5rem 0 1rem;
+		width:92%;
+	}
+
+	.display-small {
+		width:47.96748%; 
+	}
+	.alignnone.outset{
+		float:none;
+		max-width:100%;
+	}
+	.outset{
+		margin-left:0;
+	}
+	.display-small.outset{
+		margin-left:0;
+	}
+
+	/*Related Posts*/
+	.related-posts li{
+		float:left;
+		margin:5px 4.0650407% 1.25rem 0;
+		width:47.96748%;
+	}
+	.related-posts li:nth-child(2n){
+		margin:5px 0 1.25rem 0;
+	}
+
+
+}
+
+/* *********************************************************  */
+/* ***************** 1000px ********************  */
+/* *********************************************************  */
+@media screen and (min-width: 1000px){
+	#wrapper {
+		width:96%;
+		max-width:1290px;
+	}
+
+	#branding {
+		max-width:1290px;
+		width:96%;
+	}
+
+	h1#site-name {
+		width:auto;
+	}
+
+	#page,
+	.home #page {
+		width:97.674419%; /* 1260px/1290px (#page/#wrapper)*/
+	}
+	.interior #page {
+		width: 57.26495726495726%;
+    	*width: 57.21176577559556%;
+	}
+	.interior h2{
+		font-size:3.375rem;
+	}
+	h2{
+		font-weight: 100;
+	}
+	h2 a{
+		border-bottom:none;
+		color:#ffde00;
+	}
+	.no-touch h2 a:hover {
+		border-bottom:none;
+		color:#00b1f7;
+	}
+	.home-page p{
+		line-height:20px;
+	}
+	.article.news:after {
+		content:url('images/category-sprite.png');
+		position: absolute;
+		top:0;
+		right:0;
+	}
+	.no-touch .article.news:after:hover{
+		display: none;
+	}
+
+	.article{
+		margin: 0 1.7% 30px;
+		position: relative;
+		width:30%;
+	/*	-webkit-transition: background .2s ease-in-out;
+		-moz-transition: background .2s ease-in-out;
+		-o-transition: background .2s ease-in-out;
+		transition: background .2s ease-in-out;*/
+	}
+
+	.no-touch .article:hover {
+		background:black;
+	}
+
+	.no-touch .article:hover > .text-content {
+		display:block;
+	}
+	.no-touch .article:hover img {
+		opacity:.4;
+	}
+
+	.outset {
+	margin-left:-26.01626%;
+	}
+
+	.alignnone.outset {
+		text-align: right;
+		max-width:125.95122%;
+	}
+
+	.text-content {
+		background:black;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+		color:#ccc;
+		display: none;
+		overflow: hidden;
+		padding:1rem;
+		position: absolute;
+		bottom:0;
+		width:100%;
+		z-index: 999;
+	}
+
+	/* SINGLE POST */
+	#nav-below{
+		overflow: hidden;
+	}
+	.nav-previous,
+	.nav-next{
+		border:none;
+		padding:0;
+		width:50%;
+	}
+	.nav-previous {	
+		background:none;
+		float:left;
+	}
+	.nav-next {
+		background:none;
+		float:right;
+		text-align: right;
+	}
+
+	.nav-next a,
+	.nav-previous a{
+		background-color:#eee;
+		border:none;
+		display: block;
+		padding:3%;
+		width:100%;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+	.no-touch .nav-next a:hover,
+	.no-touch .nav-previous a:hover {
+		background-color: #ccc;
+	}
+
+}
+
+/* Hack to fix a problem with screenwidth: FF includes scrollbar in measurement */
+/* This means that the media query doesn't work as intended for FF at some sizes */
+/* js adds this class whenever masonry.js uses two columns */
+.twocols{
+		width:47%;  /* */
+		margin:0 1.7% 30px;
+	}
+
+/* *********************************************************  */
+/* ********************* NAVIGATION   **********************  */
+/* *********************************************************  */
+
+nav.main-nav{
+	float:right;
+	position:absolute;
+	top:34px;
+	left:300px;
+}
+
+nav ul{
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	width: 100%;
+}
+nav ul li{
+	display: block;
+	float: left;
+	margin-right: 20px;
+	padding:0;
+	font-family: adelle-1,adelle-2,sans-serif;
+}
+
+nav ul li a,
+nav ul li span{
+	display: block;
+	width: 130px;
+	border-left: 1px solid #ccc;
+	padding-left:10px;
+	color: red;
+	text-decoration: none;
+	font-weight:400;
+}
+
+nav ul li span{
+	color:#222;
+	font-weight:bold;
+}
+
+.current_page_item a{
+	display: block;
+	width: 130px;
+	border-left: 1px solid #ccc;
+	color: red;
+	text-decoration: none;
+}
+
+	/* *********************************************************  */
+	/* ***************** NO JAVASCRIPT  **********************  */
+	/* *********************************************************  */
+	.no-js #main,
+	.no-js #header{
+		max-width:640px;
+		width:97%;
+		margin:0 auto;
+	}
+	.no-js .article{
+		width:100%;  /* */
+		max-width:640px;
+		margin:15px auto;
+		font-size:0.875em;
+		overflow: hidden;
+	}
+	.no-js .article:first-child{
+		margin-top:0;
+	}
+	.no-js #wrapper{
+		max-width:700px;
+		
+	}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation:landscape) {
+	.interior #page {
+		margin-left:20%;
+		margin-right:5%;
+		width:75%;
+	}
+
+	.outset {
+		margin-left:-25%;
+	}
+}
+
+/* iPads (portrait ) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation:portrait) {
+
+	.interior #page {
+		width:85%;
+	}
+
+	.outset {
+		margin-left:0;
+	}
+}
