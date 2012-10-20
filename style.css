@@ -613,7 +613,7 @@ p.wp-caption-text {
 	p {
 		color:#777;
 	}
-	
+
 	.no-touch h2 a:hover {
 		border-bottom:none;
 		color:#00b1f7;
@@ -635,10 +635,6 @@ p.wp-caption-text {
 		margin: 0 1.7% 30px;
 		position: relative;
 		width:30%;
-	/*	-webkit-transition: background .2s ease-in-out;
-		-moz-transition: background .2s ease-in-out;
-		-o-transition: background .2s ease-in-out;
-		transition: background .2s ease-in-out;*/
 	}
 
 	.no-touch .article:hover {
