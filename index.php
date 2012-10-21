@@ -71,13 +71,11 @@
 	</div><!-- article-inner -->
 
 <!-- * THE TEXT DESCRIPTION * -->
-	<div class="text-content">
-		<a class="post-title" href="<?php the_permalink(); ?>" title="<?php printf( __('Permalink to %s', 'your-theme'), the_title_attribute('echo=0') ); ?>" rel="bookmark">
-			<span class="title"><?php the_title(); ?></span>
-			<span class="description"><?php the_excerpt(); ?> </span>
+		<a class="post-info" href="<?php the_permalink(); ?>" title="<?php printf( __('Permalink to %s', 'your-theme'), the_title_attribute('echo=0') ); ?>" rel="bookmark">
+			<h2 class="post-title"><?php the_title(); ?></h2>
+			<?php the_excerpt(); ?>
 		</a>
 
-	</div>  <!-- .text-content -->
 
 <!-- **************  CLOSE THE POST  ************************* -->	
 </div><!-- post class -->
