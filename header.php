@@ -12,27 +12,15 @@
 	
 <!-- 	 Make view viewport looks right on mobile devices -->
 	 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-	   
-	<!-- *** JQuery *** -->
-	 	<!-- 	Import local jquery -->
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.7.min.js"></script>
-	
+	  
 		<!-- TYPE KIT embed code -->
 	<script type="text/javascript" src="http://use.typekit.com/sdc3bhq.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	
-	<!-- 	Import fitvids -->
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/fitvids/jquery.fitvids.js"></script>
-	
-	<!-- 	Import custom scripts -->
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
 
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
  
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
- 
-  	<!-- 	Import modernizr after stylesheets-->
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/modernizr-2.5.3.js"></script>
 
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
  

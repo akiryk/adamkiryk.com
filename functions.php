@@ -68,6 +68,33 @@ function get_other_content_types( $query ) {
 	return $query;
 }
 
+/*
+* Load scripts in correct wp manner
+*/
+function my_scripts_method() {
+    wp_enqueue_script(
+        'scripts',
+        get_template_directory_uri() . '/js/scripts.js',
+        array('jquery')
+    );
+}
+add_action('wp_enqueue_scripts', 'my_scripts_method');
+
+function load_fit_vids() {
+    wp_enqueue_script(
+        'fitvids',
+        get_template_directory_uri() . '/js/fitvids/jquery.fitvids.js'
+    );
+}
+add_action('wp_enqueue_scripts', 'load_fit_vids');
+
+function load_modernizr() {
+    wp_enqueue_script(
+        'modernizr',
+        get_template_directory_uri() . '/js/modernizr-2.5.3.js'
+    );
+}
+add_action('wp_enqueue_scripts', 'load_modernizr');
 
 /*
 * Only display certain categories on the home page
