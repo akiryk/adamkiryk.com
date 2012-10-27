@@ -78,7 +78,7 @@ function my_scripts_method() {
         array('jquery')
     );
 }
-add_action('wp_enqueue_scripts', 'my_scripts_method');
+add_action('wp_enqueue_scripts', 'my_scripts_method', 1);
 
 function load_fit_vids() {
     wp_enqueue_script(
