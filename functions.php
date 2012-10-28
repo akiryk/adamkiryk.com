@@ -80,6 +80,15 @@ function my_scripts_method() {
 }
 add_action('wp_enqueue_scripts', 'my_scripts_method', 1);
 
+function load_my_jquery()  
+{  
+    // Deregister the included library  
+    wp_deregister_script( 'jquery' );  
+    wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js', array(), null, false );  
+} 
+add_action( 'wp_enqueue_scripts', 'load_my_jquery' );  
+
+
 function load_fit_vids() {
     wp_enqueue_script(
         'fitvids',

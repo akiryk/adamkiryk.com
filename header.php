@@ -11,12 +11,11 @@
     ?></title>
 	
 <!-- 	 Make view viewport looks right on mobile devices -->
-	 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 	  
 		<!-- TYPE KIT embed code -->
-	<script type="text/javascript" src="http://use.typekit.com/sdc3bhq.js"></script>
+	<script type="text/javascript" src="//use.typekit.net/dng0kkm.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	
 
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
  

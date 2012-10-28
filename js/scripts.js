@@ -1,6 +1,7 @@
 $(function(){
 
 	var min_width = 760;
+	
 	// DEAL WITH MASONRY
 	$('#main').imagesLoaded(function(){
 		
